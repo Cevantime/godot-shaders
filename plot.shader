@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform float aspect_ratio;
+uniform float aspect_ratio = 16/9;
 uniform float zoom:hint_range(0.1, 100.0) = 7.5;
 uniform float thickness:hint_range(1., 100.) = 5.; 
 uniform vec2 offset = vec2(0.);
