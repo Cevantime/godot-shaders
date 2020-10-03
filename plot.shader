@@ -27,5 +27,12 @@ void fragment() {
 
 	color += plot(uv, fac + step(0., -uv.x) * uv.x * -fac, green, t);
 	
+	// draw axis
+	if(length(color) <= 1.2) {
+		color += plot(uv, 0, vec4(.0, .0, 1.0, 1.0), t / 2.);
+		color += plot(uv.yx, 0, vec4(1.0, .0, .0, 1.0), t / 2.);
+	}
+	
+	
 	COLOR = color;
 }
